@@ -42,7 +42,7 @@ public class ItemEntity {
 
   @Column(name = "Status")
   @CreationTimestamp
-  private String status;
+  private long status;
 
   @Column(name = "DataCriado")
   private LocalDateTime createdAt;

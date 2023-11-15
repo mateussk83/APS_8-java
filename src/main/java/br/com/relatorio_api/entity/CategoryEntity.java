@@ -33,7 +33,7 @@ public class CategoryEntity {
   private String name;
 
   @Column(name = "Status")
-  private long category;
+  private long status;
 
   @Column(name = "DataAtualizado")
   private LocalDateTime updatedAt;

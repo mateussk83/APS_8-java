@@ -1,14 +1,12 @@
 package br.com.relatorio_api.useCases;
 
 import java.util.List;
-import java.util.Locale.Category;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.relatorio_api.bean.RelatorioResponseBean;
+import br.com.relatorio_api.bean.RelatorioItemResponseBean;
 import br.com.relatorio_api.entity.CategoryEntity;
-import br.com.relatorio_api.entity.ItemEntity;
 import br.com.relatorio_api.repository.CategoryRepository;
 import br.com.relatorio_api.repository.ItemRepository;
 
@@ -21,11 +19,11 @@ public class RelatorioItemUseCase {
   @Autowired
   private CategoryRepository categoryRepository;
 
-  public RelatorioResponseBean execute() {
+  public RelatorioItemResponseBean execute() {
 
     List<CategoryEntity> categories = categoryRepository.findAll();
 
-    RelatorioResponseBean response = new RelatorioResponseBean();
+    RelatorioItemResponseBean response = new RelatorioItemResponseBean();
 
     categories.forEach(category -> {
       response.addParam(category.getName(), category.getCodigo(), itemRepository.countItemFromCategory(category.getCodigo()));

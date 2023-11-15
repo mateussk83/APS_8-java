@@ -1,4 +1,4 @@
-package br.com.aps8.relatorio_api.constant;
+package br.com.relatorio_api.constant;
 
 public class CategoryConstant {
   public static final long CONSTRUCAO_DEMOLICAO = 1;
