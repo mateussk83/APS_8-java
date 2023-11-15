@@ -1,4 +1,4 @@
-package br.com.aps8.relatorio_api;
+package br.com.relatorio_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

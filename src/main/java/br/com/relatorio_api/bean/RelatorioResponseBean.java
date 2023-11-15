@@ -1,4 +1,4 @@
-package br.com.aps8.relatorio_api.modules.items.bean;
+package br.com.relatorio_api.bean;
 
 import java.util.List;
 

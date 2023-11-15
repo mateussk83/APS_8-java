@@ -1,4 +1,4 @@
-package br.com.aps8.relatorio_api.exceptions;
+package br.com.relatorio_api.exceptions;
 
 
 import lombok.AllArgsConstructor;

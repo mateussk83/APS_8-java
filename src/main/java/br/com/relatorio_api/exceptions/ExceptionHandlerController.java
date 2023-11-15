@@ -1,4 +1,4 @@
-package br.com.aps8.relatorio_api.exceptions;
+package br.com.relatorio_api.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;
