@@ -6,14 +6,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import br.com.relatorio_api.entity.RelatorioEntity;
+
+import br.com.relatorio_api.entity.CidadeEntity;
 
 @Repository
-public interface RelatorioRepository extends JpaRepository<RelatorioEntity, Integer> {
+public interface CidadeRepository extends JpaRepository<CidadeEntity, Integer> {
   
-  @Query(value = "SELECT DISTINCT TextoCidade FROM Cidade", nativeQuery = true) 
+  @Query(value = "SELECT DISTINCT texto_cidade FROM cidade", nativeQuery = true) 
   List<String> buscarCidades();
 
-  @Query(value = "SELECT count(*) FROM Cidade WHERE TextoCidade = :cidade", nativeQuery = true) 
+  @Query(value = "SELECT count(*) FROM cidade where texto_cidade = :cidade", nativeQuery = true) 
   Integer countNumberFromCidade(@Param("cidade") String cidade);
 }

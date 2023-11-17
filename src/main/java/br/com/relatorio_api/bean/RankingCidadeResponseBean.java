@@ -1,26 +1,31 @@
 package br.com.relatorio_api.bean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-public class RelatorioCidadeResponseBean {
+@Data
+public class RankingCidadeResponseBean {
     private List<Param> params;
 
   @Data
   @AllArgsConstructor
   public static class Param {
     private String name;
-    private long contagem;
+    private String contagem;
   }
 
   public void addParam(Param param) {
     params.add(param);
   }
 
-  public void addParam(String name, long contagem) {
+  public void addParam(String name, String contagem) {
      addParam(new Param(name,contagem)); 
     }
 
+  public RankingCidadeResponseBean() {
+    this.params = new ArrayList<Param>();
+  }
 }

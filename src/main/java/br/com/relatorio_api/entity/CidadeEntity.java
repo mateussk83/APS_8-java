@@ -13,24 +13,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity(name= "Cidade")
+@Entity(name= "cidade")
 @NoArgsConstructor
-public class RelatorioEntity {
+public class CidadeEntity {
 
   @Id
-  @Column(name = "IdCidade")
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "S_Cidade")
-  @SequenceGenerator(sequenceName = "S_Cidade", allocationSize = 1, name = "S_Cidade")
+  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "S_cidade")
+  @SequenceGenerator(sequenceName = "S_cidade", allocationSize = 1, name = "S_cidade")
   private Integer codigo;
   
-  @Column(name = "TextoCidade")
+  @Column(name = "texto_cidade")
   @NotNull
   private String name;
 
-  @Column(name = "DataCriado")
+  @Column(name = "data_criado")
   private LocalDateTime createdAt;
 
-  @Column(name = "DataAtualizado")
+  @Column(name = "data_atualizado")
   private LocalDateTime updatedAt;
   
 }
